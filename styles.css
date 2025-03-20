@@ -1,7 +1,9 @@
 body {
   margin: 0;
-  padding-bottom: 70px; /*para el footer*/
-  padding-top: 70px;  /*para el header */
+  padding-bottom: 70px;
+  /*para el footer*/
+  padding-top: 70px;
+  /*para el header */
   background-image: url("https://img.freepik.com/vector-gratis/fondo-geometrico-abstracto-diseno-poli_1048-8354.jpg");
   background-size: cover;
   background-position: center;
@@ -9,30 +11,32 @@ body {
   background-color: rgba(218, 218, 218, 0.7);
   background-blend-mode: lighten;
 }
+
 .container {
   max-width: 1200px;
-  margin: 0 auto; /* centra contenedor horizontal*/
+  margin: 0 auto;
+  /* centra contenedor horizontal*/
   padding: 20px;
 }
 
 header {
-  position: fixed; 
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background-color: #333;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1000; 
+  z-index: 1000;
   padding: 10px 20px;
 
-   /* logo  + links  */
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center;  
+  /* logo  + links  */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo img {
-  width: 50px; 
+  width: 50px;
   max-height: 50px;
 }
 
@@ -136,6 +140,65 @@ p {
 
 }
 
+/* CARDS */
+
+.title-feature {
+  text-align: center;
+  font-style: italic;
+  font-size: 30px;
+  text-decoration: underline rgb(126, 126, 126);
+
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+}
+
+.card {
+  padding: 20px;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  font-size: 25px;
+  color: rgb(207, 80, 6);
+  margin: 0;
+  padding: 0;
+}
+
+.card-subtitle {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+
 footer {
   position: fixed;
   bottom: 0;
@@ -152,127 +215,131 @@ footer {
 }
 
 
-/* FORMULARIO     */ 
-.form-title{
+/* FORMULARIO     */
+.form-title {
   font-size: 30px;
   background-color: rgb(87, 87, 87);
   padding: 10px;
   color: white;
   text-align: center;
 }
-  .form {
-    margin: auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
 
-  fieldset {
-    border: 2px solid #ff4141;
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    background: #FCEDDA;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
+.form {
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-  legend {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-    padding: 0 10px;
-    margin-top:5px;
-  }
+fieldset {
+  border: 2px solid #ff4141;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background: #FCEDDA;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-  .grid-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
+legend {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  padding: 0 10px;
+  margin-top: 5px;
+}
 
-  .input-box {
-    margin-bottom: 15px;
-  }
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
 
-  .input-box label {
-    font-weight: bold;
-    color: #222;
-    display: block;
-    margin-bottom: 5px;
-  }
+.input-box {
+  margin-bottom: 15px;
+}
 
-  .form :where(input, select, textarea) {
-    width: 100%;
-    height: 25px;
-    font-size: 1rem;
-    border: 2px solid #ff9787;
-    border-radius: 6px;
-    background-color: rgb(255, 255, 255);
-    color: #000000;
-    transition: border-color 0.3s ease;
-  }
+.input-box label {
+  font-weight: bold;
+  color: #222;
+  display: block;
+  margin-bottom: 5px;
+}
 
-  .form :where(input, select, textarea):focus {
-    border-color: #D9432F;
-    box-shadow: 0 0 8px rgba(238, 78, 52, 0.5);
-    outline: none;
-  }
- 
-  .form-check {
-    display: flex;
-    align-items: center;
-    gap: 5px; /* Espacio entre input y label */
-  }
-  .form-check-input {
-    margin-right: 10px;
-    width: 18px;         
-    height: 18px;       
-  }
-  
-  .form-check-label {
-    font-size: 1rem;
-    color: #333;
-    cursor: pointer;
-    margin: 0;
-  }
- 
-  .input-box textarea {
-    min-height: 100px;
-    resize: vertical;
-  }
-  .button-group {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 10px;
-  }
-  
-  .button-group button {
-    width: auto;
-    height: 45px;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    background: #D9432F;
-  }
-  
-  .button-group button:hover {
-    background: #B43227;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .button-group button[type="reset"] {
-    background: #ccc; 
-  }
-  
-  .button-group button[type="reset"]:hover {
-    background: #b0b0b0; 
-  }
+.form :where(input, select, textarea) {
+  width: 100%;
+  height: 25px;
+  font-size: 1rem;
+  border: 2px solid #ff9787;
+  border-radius: 6px;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  transition: border-color 0.3s ease;
+}
+
+.form :where(input, select, textarea):focus {
+  border-color: #D9432F;
+  box-shadow: 0 0 8px rgba(238, 78, 52, 0.5);
+  outline: none;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  /* Espacio entre input y label */
+}
+
+.form-check-input {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+}
+
+.form-check-label {
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  margin: 0;
+}
+
+.input-box textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.button-group button {
+  width: auto;
+  height: 45px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #D9432F;
+}
+
+.button-group button:hover {
+  background: #B43227;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button-group button[type="reset"] {
+  background: #ccc;
+}
+
+.button-group button[type="reset"]:hover {
+  background: #b0b0b0;
+}
 
 
 /* TABLA DE CONTENIDO CONFERENCIA    */
@@ -339,8 +406,10 @@ footer {
   color: #333;
   margin-bottom: 1.5rem;
 }
+
 .conferencia-gallery {
-  display: flex; /*  se acomoden en varias líneas*/
+  display: flex;
+  /*  se acomoden en varias líneas*/
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
@@ -372,6 +441,7 @@ footer {
   transform: scale(1.1);
   filter: brightness(0.8);
 }
+
 .button {
   margin-top: 2rem;
 }
@@ -397,41 +467,45 @@ footer {
 /* HEADER : LOGO + NAV     */
 @media (max-width: 768px) {
   header {
-    flex-direction: column; /* en pantallas pequeñas los ponemos en vertical el contenido del contenedor   */
-    padding: 0;    text-align: center; 
+    flex-direction: column;
+    /* en pantallas pequeñas los ponemos en vertical el contenido del contenedor   */
+    padding: 0;
+    text-align: center;
   }
 
-  .logo  {
+  .logo {
     display: none;
-    
+
   }
+
   nav {
-    margin-right: 0; 
-    width: 100%; 
-    justify-content: center; 
+    margin-right: 0;
+    width: 100%;
+    justify-content: center;
   }
 
   .nav-links {
-    flex-direction: column; 
-    gap: 10px; 
-    width: 100%; 
- 
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+
   }
 
   .nav-links a {
-    font-size: 18px; 
+    font-size: 18px;
   }
 }
 
 /* SECCION HERO*/
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 20px; 
+    font-size: 20px;
     width: 90%;
   }
+
   .hero-subtitle {
-    font-size: 16px; 
-    max-width: 80%; /
+    font-size: 16px;
+    max-width: 80%;/
   }
 }
 
@@ -439,28 +513,31 @@ footer {
 @media (max-width: 768px) {
   .presentation-section {
     flex-direction: column;
-    gap: 30px; 
+    gap: 30px;
   }
-  
+
   .presentation-title {
-    width: 100%; 
+    width: 100%;
   }
-  
+
   .presentacion-image img {
-    width: 100%; 
-    height: auto; 
+    width: 100%;
+    height: auto;
   }
 }
 
 /*SECCION TABLA*/
 @media (max-width: 768px) {
   .agenda-grid {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
   }
+
   .header-item {
     display: none;
   }
-  .grid-item, .header-item {
+
+  .grid-item,
+  .header-item {
     font-size: 0.9rem;
     padding: 8px;
   }
