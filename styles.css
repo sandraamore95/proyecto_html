@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  padding: 0;
+  padding-bottom: 70px; 
+  padding-top: 70px; 
   background-image: url("https://img.freepik.com/vector-gratis/fondo-geometrico-abstracto-diseno-poli_1048-8354.jpg");
   background-size: cover;
   background-position: center;
@@ -8,7 +9,6 @@ body {
   background-color: rgba(218, 218, 218, 0.7);
   background-blend-mode: lighten;
 }
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -16,12 +16,14 @@ body {
 }
 
 header {
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
   background-color: #333;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  z-index: 1000; 
+  padding: 10px 20px;
 }
 
 nav {
@@ -29,7 +31,6 @@ nav {
   justify-content: center;
   /* logo  + links  */
   align-items: center;
-  padding: 10px 20px;
 }
 
 .nav-links {
@@ -125,14 +126,21 @@ p {
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   background-color: #333;
-  color: #fff;
+  color: white;
   text-align: center;
-  padding: 25px;
-
+  padding-top: 10px;
+  height: 50px;
+  line-height: 50px;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
- 
+
 /* FORMULARIO     */ 
 .form-title{
   font-size: 30px;
