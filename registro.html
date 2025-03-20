@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  <!-- incluimos el navbar -->
+  <header>
+    <nav>
+      <ul class="nav-links">
+        <li> <a href="index.html">Inicio</a></li>
+        <li><a href="contenido.html">Contenido</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1 class="form-title">Formulario de Registro</h1>
+  <section class="form-section container">
+    <form class="form" action="#" method="post" enctype="multipart/form-data">
+
+      <!-- Datos Personales y Contacto -->
+      <fieldset class="grid-2">
+        <legend>Datos Personales</legend>
+        <div class="input-box">
+          <label for="nombre">Nombre Completo</label>
+          <input required placeholder="Ingresa Nombre completo" type="text" name="nombre" id="nombre">
+        </div>
+        <div class="input-box">
+          <label for="fechaNacimiento">Fecha Nacimiento</label>
+          <input required placeholder="Ingresa fecha de nacimiento" type="date" name="fechaNacimiento"
+            id="fechaNacimiento">
+        </div>
+        <div class="input-box">
+          <label for="email">Email</label>
+          <input required placeholder="Ingresa Email" type="email" name="email" id="email">
+        </div>
+
+        <div class="input-box">
+          <label for="telefono">Teléfono</label>
+          <input required placeholder="Ingresa Telefono" type="tel" name="telefono" id="telefono">
+        </div>
+
+        <div class="input-box">
+          <label for="direccion">Dirección</label>
+          <input required placeholder="Ingresa Direccion" type="text" name="direccion" id="direccion">
+        </div>
+      </fieldset>
+
+      <!-- Información de Pago -->
+      <fieldset class="grid-2">
+        <legend>Información de Pago</legend>
+        <div class="input-box">
+          <label for="tarjeta">Número de Tarjeta de Crédito</label>
+          <input required placeholder="Ingresa Tarjeta de crecido" type="text" name="tarjeta" id="tarjeta"
+            pattern="\d{16}" title="Ingrese 16 dígitos">
+        </div>
+        <div class="input-box">
+          <label for="expiracion">Fecha de Expiración</label>
+          <input required type="month" name="expiracion" id="expiracion">
+        </div>
+      </fieldset>
+
+
+      <fieldset class="grid-2">
+        <legend>Preferencias del Evento</legend>
+        <div class="select-box">
+          <label for="pais">País</label>
+          <select name="pais" id="pais" required>
+            <option value="">Seleccione un país</option>
+            <option value="espana">España</option>
+            <option value="euu">EUU</option>
+            <option value="argentina">Argentina</option>
+            <option value="mexico">México</option>
+            <option value="canada">Canadá</option>
+            <option value="australia">Australia</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <legend>Sesión Principal</legend>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" id="matutina" name="sesion" value="matutina" required>
+            <label class="form-check-label" for="matutina">Matutina</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" id="vespertina" name="sesion" value="vespertina">
+            <label class="form-check-label" for="vespertina">Vespertina</label>
+          </div>
+        </div>
+      </fieldset>
+
+
+      <!-- Subir Archivo -->
+      <fieldset>
+        <legend>Subir Archivo CV</legend>
+        <div class="input-box">
+          <input type="file" name="cv" id="cv">
+        </div>
+      </fieldset>
+
+
+      <!-- Comentarios Adicionales -->
+      <fieldset>
+        <legend>Comentarios Adicionales</legend>
+        <div class="input-box">
+          <textarea name="comentarios" id="comentarios" rows="4"></textarea>
+        </div>
+      </fieldset>
+      <div class="button-group">
+        <button type="reset">Resetear</button>
+        <button type="submit">Enviar</button>
+
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Conferencia Internacional</p>
+  </footer>
+
+
+
+</body>
+
+</html>

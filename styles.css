@@ -1,0 +1,374 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("https://img.freepik.com/vector-gratis/fondo-geometrico-abstracto-diseno-poli_1048-8354.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(218, 218, 218, 0.7);
+  background-blend-mode: lighten;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  /* logo  + links  */
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.nav-links a:hover {
+  color: rgb(187, 187, 187);
+}
+
+.hero-section {
+  background-image: url("https://yumagic.com/wp-content/uploads/2023/06/Tips-fotografia-conferencias-y-exposiciones.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  color: white;
+  margin-top: 30px;
+
+
+  display: flex;
+  flex-direction: column;
+  /* alinear VERTICAL  */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+
+}
+
+.hero-title {
+  font-size: 30px;
+  text-align: center;
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero-title:hover {
+  transform: scale(1.1);
+  color: rgb(205, 255, 171);
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  max-width: 60%;
+  background-color: rgb(221, 221, 221);
+  color: rgb(75, 65, 65);
+  padding: 10px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.presentation-section {
+  display: flex;
+  flex-direction: row;
+  /* alinear HORIZONTAL  */
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.presentacion-image img {
+  width: 25em;
+  border-radius: 10px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.presentacion-image img:hover {
+  opacity: 0.7;
+}
+
+.presentation-title {
+  width: 50%;
+}
+
+.presentation-title p {
+  font-size: 20px;
+  margin-bottom: 10px;
+
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 25px;
+
+}
+
+ 
+/* FORMULARIO     */ 
+.form-title{
+  font-size: 30px;
+  background-color: rgb(87, 87, 87);
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+  .form {
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  fieldset {
+    border: 2px solid #ff4141;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background: #FCEDDA;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    padding: 0 10px;
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .input-box {
+    margin-bottom: 15px;
+  }
+
+  .input-box label {
+    font-weight: bold;
+    color: #222;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .form :where(input, select, textarea) {
+    width: 100%;
+    height: 25px;
+    font-size: 1rem;
+    border: 2px solid #ff7d69;
+    border-radius: 6px;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    transition: border-color 0.3s ease;
+  }
+
+  .form :where(input, select, textarea):focus {
+    border-color: #D9432F;
+    box-shadow: 0 0 8px rgba(238, 78, 52, 0.5);
+    outline: none;
+  }
+  .form-check {
+    display: flex;
+    align-items: center;  
+    margin-bottom: 10px;  
+  }
+  
+  .form-check-input {
+    margin-right: 10px;
+    width: 18px;         
+    height: 18px;       
+  }
+  
+  .form-check-label {
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    margin: 0;
+  }
+
+  .input-box textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  .button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .button-group button {
+    width: auto;
+    height: 45px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #D9432F;
+  }
+  
+  .button-group button:hover {
+    background: #B43227;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .button-group button[type="reset"] {
+    background: #ccc; 
+  }
+  
+  .button-group button[type="reset"]:hover {
+    background: #b0b0b0; 
+  }
+
+
+/* TABLA DE CONTENIDO CONFERENCIA    */
+.agenda-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 10px;
+}
+
+.header-item {
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(238, 78, 52, 0.8);
+  color: white;
+  border-radius: 5px;
+}
+
+.grid-item {
+  background-color: rgba(252, 237, 218, 0.8);
+  padding: 12px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.grid-item:nth-child(odd) {
+  background-color: rgba(249, 249, 249, 0.8);
+}
+
+.grid-item:hover {
+  background-color: rgba(241, 227, 213, 0.8);
+  cursor: pointer;
+}
+
+.agenda-grid .header-item {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.grid-item {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.agenda-grid {
+  margin-top: 20px;
+}
+
+/* GALERIA CONFERENCIA   */
+.conferencia-content {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+}
+
+.conferencia-content h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+.conferencia-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.gallery-item {
+  max-width: 250px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+  filter: brightness(0.8);
+}
+.button {
+  margin-top: 2rem;
+}
+
+.button .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background: #d9534f;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.button .btn:hover {
+  background: #c9302c;
+  transform: scale(1.05);
+}
