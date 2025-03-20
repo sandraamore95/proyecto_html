@@ -80,8 +80,22 @@
 
       <fieldset class="grid-2">
         <legend>Preferencias del Evento</legend>
-        <div class="select-box">
-          <label for="pais">País</label>
+        <!-- SESION PRINCIPAL RADIO-->
+        <div class="mb-3">
+          <legend>Sesión Principal</legend>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" id="matutina" name="sesion" value="matutina" required>
+            <label class="form-check-label" for="matutina">Matutina</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" id="vespertina" name="sesion" value="vespertina">
+            <label class="form-check-label" for="vespertina">Vespertina</label>
+          </div>
+        </div>
+
+        <!--PAIS SELECT -->
+        <div class="mb-3">
+          <legend>Pais</legend>
           <select name="pais" id="pais" required>
             <option value="">Seleccione un país</option>
             <option value="espana">España</option>
@@ -93,15 +107,22 @@
           </select>
         </div>
 
+        <!-- TALLERES -->
         <div class="mb-3">
-          <legend>Sesión Principal</legend>
+          <legend>Talleres</legend>
           <div class="form-check">
-            <input class="form-check-input" type="radio" id="matutina" name="sesion" value="matutina" required>
-            <label class="form-check-label" for="matutina">Matutina</label>
+            <input class="form-check-input" type="checkbox" id="desarrollo-web" name="talleres[]"
+              value="desarrollo-web">
+            <label class="form-check-label" for="desarrollo-web">Desarrollo Web</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" id="vespertina" name="sesion" value="vespertina">
-            <label class="form-check-label" for="vespertina">Vespertina</label>
+            <input class="form-check-input" type="checkbox" id="inteligencia-artificial" name="talleres[]"
+              value="inteligencia-artificial">
+            <label class="form-check-label" for="inteligencia-artificial">Inteligencia Artificial</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="diseno" name="talleres[]" value="diseno">
+            <label class="form-check-label" for="diseno">Diseño</label>
           </div>
         </div>
       </fieldset>
