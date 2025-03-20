@@ -339,7 +339,7 @@ footer {
   margin-bottom: 1.5rem;
 }
 .conferencia-gallery {
-  display: flex;
+  display: flex; /*  se acomoden en varias líneas*/
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
@@ -361,7 +361,6 @@ footer {
   border-radius: 8px;
   transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
-
 
 .gallery-item:hover {
   transform: scale(1.05);
@@ -392,37 +391,83 @@ footer {
   transform: scale(1.05);
 }
 
-
-
 /* MEDIAQUERYS */
+
+/* HEADER : LOGO + NAV     */
 @media (max-width: 768px) {
   header {
-    flex-direction: column;
-    padding: 10px; 
+    flex-direction: column; /* en pantallas pequeñas los ponemos en vertical el contenido del contenedor   */
+    padding: 0;    text-align: center; 
   }
 
-  .logo img {
-    width: 40px;
-    max-height: 40px; 
-    margin-left: 40px;
+  .logo  {
+    display: none;
     
   }
- 
-
   nav {
     margin-right: 0; 
     width: 100%; 
-    justify-content: space-evenly; 
+    justify-content: center; 
   }
 
   .nav-links {
     flex-direction: column; 
     gap: 10px; 
     width: 100%; 
-    text-align: center; 
+ 
   }
 
   .nav-links a {
     font-size: 18px; 
+  }
+}
+
+/* SECCION HERO*/
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 20px; 
+    width: 90%;
+  }
+  .hero-subtitle {
+    font-size: 16px; 
+    max-width: 80%; /
+  }
+}
+
+/* SECCION PRESENTACION */
+@media (max-width: 768px) {
+  .presentation-section {
+    flex-direction: column;
+    gap: 30px; 
+  }
+  
+  .presentation-title {
+    width: 100%; 
+  }
+  
+  .presentacion-image img {
+    width: 100%; 
+    height: auto; 
+  }
+}
+
+/*SECCION TABLA*/
+@media (max-width: 768px) {
+  .agenda-grid {
+    grid-template-columns: 1fr; 
+  }
+  .header-item {
+    display: none;
+  }
+  .grid-item, .header-item {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
+/* SECCION FORMULARIO  */
+@media (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
   }
 }
