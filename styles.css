@@ -152,7 +152,7 @@ p {
 
 .cards {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* para el responsive */
   justify-content: center;
   gap: 20px;
 
@@ -163,11 +163,11 @@ p {
   width: 300px;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; /* Suaviza las transiciones cuando se aplica un efecto */
 }
-.card:hover {
-  transform: translateY(-5px); 
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+.card:hover { 
+  transform: translateY(-5px);  /* mueve la tarjeta hacia arriba */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /*aumenta sombra */
 }
 
 .card-body {
@@ -181,7 +181,7 @@ p {
 .card img {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: cover; /* recorta y ajusta la imagen */
   border-radius: 10px;
   margin-bottom: 15px;
 }
@@ -189,8 +189,6 @@ p {
 .card-title {
   font-size: 25px;
   color: rgb(207, 80, 6);
-  margin: 0;
-  padding: 0;
 }
 
 .card-subtitle {
@@ -345,16 +343,15 @@ legend {
 /* TABLA DE CONTENIDO CONFERENCIA    */
 .agenda-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
   grid-gap: 1rem;
   padding: 20px;
-  background-size: cover;
-  background-position: center;
-  margin-bottom: 10px;
 }
 
 .header-item {
   font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: 600;
   text-align: center;
   padding: 10px;
   background-color: rgba(238, 78, 52, 0.8);
@@ -365,11 +362,21 @@ legend {
 .grid-item {
   background-color: rgba(252, 237, 218, 0.8);
   padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* se alinee bien el contenido */
+  font-size: 1rem;
+  font-weight: 400;
   text-align: center;
   border-radius: 5px;
   border: 1px solid #ddd;
 }
 
+.separator {
+  display: none;
+}
+
+/* cambia el color de los items impares */
 .grid-item:nth-child(odd) {
   background-color: rgba(249, 249, 249, 0.8);
 }
@@ -377,20 +384,6 @@ legend {
 .grid-item:hover {
   background-color: rgba(241, 227, 213, 0.8);
   cursor: pointer;
-}
-
-.agenda-grid .header-item {
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-.grid-item {
-  font-size: 1rem;
-  font-weight: 400;
-}
-
-.agenda-grid {
-  margin-top: 20px;
 }
 
 /* GALERIA CONFERENCIA   */
@@ -423,7 +416,7 @@ legend {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.gallery-item img {
+.gallery-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -447,7 +440,7 @@ legend {
 }
 
 .button .btn {
-  display: inline-block;
+  display: inline-block; /* para poder ajustar el w y h */
   padding: 10px 20px;
   font-size: 1rem;
   color: #fff;
@@ -475,7 +468,6 @@ legend {
 
   .logo {
     display: none;
-
   }
 
   nav {
@@ -530,6 +522,14 @@ legend {
 @media (max-width: 768px) {
   .agenda-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .separator {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #b9adad;
+    margin: 10px 0;
   }
 
   .header-item {
